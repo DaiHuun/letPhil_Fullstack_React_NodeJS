@@ -13,6 +13,11 @@ export function RenderFruitList() {
       dataPreview={fruits}
     >
       {/* code here */}
+      <ul>
+        {fruits.map((fruit) => (
+          <li>{fruit}</li>
+        ))}
+      </ul>
     </ProblemCard>
   );
 }

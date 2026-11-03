@@ -11,6 +11,9 @@ export const CapitalizeWords = () => {
       dataPreview={animals}
     >
       {/* code here */}
+      {animals.map((animal) => {
+        return <p style={{ textTransform: "capitalize" }}>{animal}</p>;
+      })}
     </ProblemCard>
   );
 };
