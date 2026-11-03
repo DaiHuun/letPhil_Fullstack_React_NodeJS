@@ -27,7 +27,7 @@ export const ConditionalRender = () => {
       {/* code here */}
       {users.map((user) => (
         <div>
-          {user.isOnline ? `${user.name}🟢 Online` : `${user.name}⚪ Offline`}
+          {user.isOnline ? `${user.name} 🟢 Online` : `${user.name} ⚪ Offline`}
         </div>
       ))}
     </ProblemCard>
