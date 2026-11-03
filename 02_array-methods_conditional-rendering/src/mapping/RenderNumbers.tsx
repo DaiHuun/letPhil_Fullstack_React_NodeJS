@@ -16,6 +16,9 @@ export const RenderNumbers = () => {
       dataPreview={numbers}
     >
       {/* code here */}
+      {numbers.map((number) => (
+        <div>Number: {number}</div>
+      ))}
     </ProblemCard>
   );
 };

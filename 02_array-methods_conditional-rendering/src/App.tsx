@@ -2,8 +2,15 @@ import "./App.css";
 // import { Todo } from "./components/Todo.tsx";
 /* MAP IMPORTS */
 import { RenderFruitList } from "./mapping/FruitList";
+import { RenderNumbers } from "./mapping";
 import { CapitalizeWords } from "./mapping/CapitalizeWords";
+import { RenderObjects } from "./mapping/RenderObjects";
+import { DoubleNumbers } from "./mapping/DoubleNumbers";
+import { RenderFromData } from "./mapping/RenderFromData";
 import { ConditionalRender } from "./mapping/ConditionalRender";
+import { RankedList } from "./mapping/RankedList";
+import { FormatPrices } from "./mapping/FormatPrices";
+import { FullNames } from "./mapping/FullNames";
 
 /* FILTER IMPORTS */
 import { AdminsOnly } from "./filtering/AdminsOnly";
@@ -40,13 +47,20 @@ function App() {
       ))} */}
 
       {/* map */}
-      {/* <RenderFruitList />
+      <RenderFruitList />
+      <RenderNumbers />
       <CapitalizeWords />
-      <ConditionalRender /> */}
+      <RenderObjects />
+      <DoubleNumbers />
+      <RenderFromData />
+      <ConditionalRender />
+      <RankedList />
+      <FormatPrices />
+      <FullNames />
 
       {/* filter */}
-      <AdminsOnly />
-      <PriceGreaterThan20 />
+      {/* <AdminsOnly />
+      <PriceGreaterThan20 /> */}
     </>
   );
 }

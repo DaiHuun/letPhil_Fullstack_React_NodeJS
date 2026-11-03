@@ -10,6 +10,11 @@ export const RankedList = () => {
       dataPreview={items}
     >
       {/* code here */}
+      <ol>
+        {items.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ol>
     </ProblemCard>
   );
 };

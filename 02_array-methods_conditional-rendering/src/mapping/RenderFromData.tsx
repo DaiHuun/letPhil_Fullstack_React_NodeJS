@@ -1,4 +1,6 @@
 import ProblemCard from "../extras/ProblemCard";
+/* Import UserCard*/
+import { UserCard } from "../components/UserCard";
 
 export const RenderFromData = () => {
   const users = [
@@ -14,6 +16,9 @@ export const RenderFromData = () => {
       dataPreview={users}
     >
       {/* code here */}
+      {users.map((user) => (
+        <UserCard id={user.id} name={user.name} email={user.email} />
+      ))}
     </ProblemCard>
   );
 };

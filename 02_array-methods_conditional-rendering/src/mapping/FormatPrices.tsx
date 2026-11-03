@@ -10,6 +10,10 @@ export const FormatPrices = () => {
       dataPreview={prices}
     >
       {/* code here */}
+      {/* toFixed method */}
+      {prices.map((price) => (
+        <div>{price.toFixed(2)}</div>
+      ))}
     </ProblemCard>
   );
 };

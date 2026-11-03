@@ -1,7 +1,7 @@
 import ProblemCard from "../extras/ProblemCard";
 
 /**
- * Render out al ist of each number doubled
+ * Render out a list of each number doubled
  */
 
 export const DoubleNumbers = () => {
@@ -14,6 +14,11 @@ export const DoubleNumbers = () => {
       dataPreview={nums}
     >
       {/* code here */}
+      {nums.map((num) => (
+        <li>
+          {num} doubled is {num * 2}
+        </li>
+      ))}
     </ProblemCard>
   );
 };

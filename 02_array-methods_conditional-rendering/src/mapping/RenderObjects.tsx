@@ -10,6 +10,9 @@ export const RenderObjects = () => {
       dataPreview={users}
     >
       {/* code here */}
+      {users.map((user) => (
+        <p>{user.name}</p>
+      ))}
     </ProblemCard>
   );
 };
