@@ -1,2 +1,2 @@
-Refresh on Array Methods (Filter, Map, Reduce)
-Learning about Conditional Rendering in typescript
+- Refresh on Array Methods (Filter, Map, Reduce)
+- Learning about Conditional Rendering in typescript
