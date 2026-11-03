@@ -1,8 +1,13 @@
 import "./App.css";
 // import { Todo } from "./components/Todo.tsx";
+/* MAP IMPORTS */
 import { RenderFruitList } from "./mapping/FruitList";
 import { CapitalizeWords } from "./mapping/CapitalizeWords";
 import { ConditionalRender } from "./mapping/ConditionalRender";
+
+/* FILTER IMPORTS */
+import { AdminsOnly } from "./filtering/AdminsOnly";
+import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
 
 /**
  * Array Methods: 3 higher order functions
@@ -35,11 +40,13 @@ function App() {
       ))} */}
 
       {/* map */}
-      <RenderFruitList />
+      {/* <RenderFruitList />
       <CapitalizeWords />
-      <ConditionalRender />
+      <ConditionalRender /> */}
 
       {/* filter */}
+      <AdminsOnly />
+      <PriceGreaterThan20 />
     </>
   );
 }
