@@ -1,4 +1,4 @@
-import ProblemCard from "../components/ProblemCard";
+import ProblemCard from "../extras/ProblemCard";
 
 export const RenderFromData = () => {
   const users = [
