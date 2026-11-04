@@ -1,4 +1,3 @@
-import React from "react";
 import ProblemCard from "../extras/ProblemCard";
 
 export const GroupUsers = () => {
@@ -10,17 +9,30 @@ export const GroupUsers = () => {
     { id: 5, name: "Bone", role: "admin" },
   ];
 
-  const groupedRoles = users.reduce(
-    (acc: any, curr: any) => {
-      if (curr.role === "admin") {
-        acc.admin.push(curr);
-      } else {
-        acc.user.push(curr);
-      }
+  /**
+   * Goal: Group each users by role
+   * Start:
+   * End Goal: {curr.name} {curr.role}
+   * Count
+   *
+   * Making an object to
+   *  admin  ,  user
+   * { [ []  ,  [] ] }
+   */
 
+  // 1. loop everything (reduce method)
+  // 2. check users role
+  // 3. branching decisions either the role is admin or user
+  // if admin => add/push to admins:[]
+  // if user => add/push to users:[]
+  // 4. return acc
+
+  const userRole = users.reduce(
+    (acc, user) => {
+      (acc[user.role] ??= []).push(user);
       return acc;
     },
-    { admin: [], user: [] },
+    {} as Record<string, typeof users>,
   );
 
   return (
@@ -32,6 +44,8 @@ export const GroupUsers = () => {
     >
       <div>
         {/* TODO: const grouped = users.reduce((acc, u) => {...}, {} as Record<string, typeof users>) Admin: , */}
+        <p>Admins: {userRole.admin.map((user) => user.name).join(", ")}</p>
+        <p>Users: {userRole.user.map((user) => user.name).join(", ")}</p>
       </div>
     </ProblemCard>
   );
