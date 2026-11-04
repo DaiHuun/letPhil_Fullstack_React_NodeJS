@@ -1,20 +1,27 @@
 import "./App.css";
 // import { Todo } from "./components/Todo.tsx";
 /* MAP IMPORTS */
-import { RenderFruitList } from "./mapping/FruitList";
-import { RenderNumbers } from "./mapping";
-import { CapitalizeWords } from "./mapping/CapitalizeWords";
-import { RenderObjects } from "./mapping/RenderObjects";
-import { DoubleNumbers } from "./mapping/DoubleNumbers";
-import { RenderFromData } from "./mapping/RenderFromData";
-import { ConditionalRender } from "./mapping/ConditionalRender";
-import { RankedList } from "./mapping/RankedList";
-import { FormatPrices } from "./mapping/FormatPrices";
-import { FullNames } from "./mapping/FullNames";
+// import { RenderFruitList } from "./mapping/FruitList";
+// import { RenderNumbers } from "./mapping";
+// import { CapitalizeWords } from "./mapping/CapitalizeWords";
+// import { RenderObjects } from "./mapping/RenderObjects";
+// import { DoubleNumbers } from "./mapping/DoubleNumbers";
+// import { RenderFromData } from "./mapping/RenderFromData";
+// import { ConditionalRender } from "./mapping/ConditionalRender";
+// import { RankedList } from "./mapping/RankedList";
+// import { FormatPrices } from "./mapping/FormatPrices";
+// import { FullNames } from "./mapping/FullNames";
 
 /* FILTER IMPORTS */
+import { EvensOnly } from "./filtering/EvensOnly";
+import { LongWordsOnly } from "./filtering/LongWordsOnly";
 import { AdminsOnly } from "./filtering/AdminsOnly";
 import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
+import { CaseInsensitive } from "./filtering/CaseInsensitive";
+import { MultipleConditions } from "./filtering/MultipleConditions";
+import { SearchSimulation } from "./filtering/SearchSimulation";
+import { EmptyState } from "./filtering/EmptyState";
+import { PreFilter } from "./filtering/PreFilter";
 
 /**
  * Array Methods: 3 higher order functions
@@ -47,7 +54,7 @@ function App() {
       ))} */}
 
       {/* map */}
-      <RenderFruitList />
+      {/* <RenderFruitList />
       <RenderNumbers />
       <CapitalizeWords />
       <RenderObjects />
@@ -56,11 +63,18 @@ function App() {
       <ConditionalRender />
       <RankedList />
       <FormatPrices />
-      <FullNames />
+      <FullNames /> */}
 
       {/* filter */}
-      {/* <AdminsOnly />
-      <PriceGreaterThan20 /> */}
+      <EvensOnly />
+      <LongWordsOnly />
+      <AdminsOnly />
+      <PriceGreaterThan20 />
+      <CaseInsensitive />
+      <MultipleConditions />
+      <SearchSimulation searchTerm="script" />
+      <EmptyState />
+      <PreFilter />
     </>
   );
 }

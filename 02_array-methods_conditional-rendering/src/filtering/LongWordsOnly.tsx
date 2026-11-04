@@ -14,8 +14,7 @@ export const LongWordsOnly = () => {
     "gorilla",
   ];
 
-  const filterWord = words.filter((word) => word.length > 4);
-
+  const longWords = words.filter((word) => word.length > 4);
   return (
     <ProblemCard
       title="Filter 02 — Filter strings by length"
@@ -23,8 +22,8 @@ export const LongWordsOnly = () => {
       question="Render only words longer than 4 characters."
       dataPreview={words}
     >
-      {filterWord.map((word, index) => (
-        <li key={word + index}>{word}</li>
+      {longWords.map((longWord) => (
+        <li>{longWord}</li>
       ))}
     </ProblemCard>
   );

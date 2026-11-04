@@ -1,25 +1,26 @@
-import React from "react";
+import ProblemCard from "../extras/ProblemCard";
 
 export const EmptyState = () => {
   const items = ["Apple", "Banana"];
   const searchTerm = "zzz";
 
   const filter = items.filter((item) => {
-    const lower_spelling = item.toLowerCase();
-    const lower_search = searchTerm.toLowerCase();
-
-    // ternary operator 
-    return lower_spelling === lower_search ? item : "No results found";
+    item.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   return (
-    <ProblmCard
+    <ProblemCard
       title="Filter 09 — Empty state handling"
       method="filter"
       question='Filter by searchTerm. If no results, show "No results found".'
       dataPreview={{ items, searchTerm }}
     >
-      <p>{filter}</p>
-    </ProblmCard>
+      {/* Ternary */}
+      {filter.length > 0 ? (
+        filter.map((item) => <p>{item}</p>)
+      ) : (
+        <p>No results found</p>
+      )}
+    </ProblemCard>
   );
 };

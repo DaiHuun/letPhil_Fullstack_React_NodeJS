@@ -1,10 +1,18 @@
-import React from "react";
+import ProblemCard from "../extras/ProblemCard";
 
-export const SearchSimulation = ({ searchTerm }) => {
+/**
+ * Create a type for searchTerm prop
+ */
+type SearchSimulationType = {
+  searchTerm: string;
+};
+
+export const SearchSimulation = ({ searchTerm }: SearchSimulationType) => {
   const items = ["React", "JavaScript", "TypeScript", "Node", "CSS"];
 
-  const filtered_items = items.filter((item) => item === searchTerm);
-
+  const filteredItems = items.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   return (
     <ProblemCard
@@ -13,10 +21,9 @@ export const SearchSimulation = ({ searchTerm }) => {
       question="Filter items that include the searchTerm prop (case-insensitive), then render them."
       dataPreview={{ items, searchTerm: searchTerm }}
     >
-        <div>{filtered_items}</div>
+      {filteredItems.map((item) => (
+        <li>{item}</li>
+      ))}
     </ProblemCard>
   );
 };
-
-
-

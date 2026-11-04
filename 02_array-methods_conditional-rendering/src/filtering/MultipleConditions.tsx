@@ -1,6 +1,5 @@
 import ProblemCard from "../extras/ProblemCard";
 
-
 export const MultipleConditions = () => {
   const users = [
     { id: 1, name: "Chris", active: true, age: 17 },
@@ -10,9 +9,7 @@ export const MultipleConditions = () => {
     { id: 5, name: "Morgan", active: true, age: 30 },
   ];
 
-  // filtered
-  const filteredUsers = users.filter((user) => user.active && user.age > 18);
-
+  const filteredUsers = users.filter((user) => user.age > 18 && user.active);
   return (
     <ProblemCard
       title="Filter 07 — Multiple conditions"
@@ -20,8 +17,12 @@ export const MultipleConditions = () => {
       question="Render users who are active AND age > 18."
       dataPreview={users}
     >
-      {filteredUsers.map((userObject) => (
-        <li key={userObject.id}>{userObject.name}</li>
+      {filteredUsers.map((user) => (
+        <div>
+          <p>
+            {user.name} - {user.age} - {user.active ? "Active" : "Not Active"}
+          </p>
+        </div>
       ))}
     </ProblemCard>
   );

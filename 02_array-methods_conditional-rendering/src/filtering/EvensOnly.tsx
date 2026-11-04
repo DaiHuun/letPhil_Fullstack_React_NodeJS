@@ -1,6 +1,9 @@
 import ProblemCard from "../extras/ProblemCard";
 
 export const EvensOnly = () => {
+  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  const evenNumbers = nums.filter((num) => num % 2 === 0);
 
   return (
     <ProblemCard
@@ -10,7 +13,7 @@ export const EvensOnly = () => {
       dataPreview={nums}
     >
       {evenNumbers.map((evenNumber) => (
-        <p>evenNumber are: {evenNumber}</p>
+        <p>{evenNumber} is an evenNumber </p>
       ))}
     </ProblemCard>
   );
