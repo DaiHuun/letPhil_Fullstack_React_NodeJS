@@ -13,15 +13,25 @@ import "./App.css";
 // import { FullNames } from "./mapping/FullNames";
 
 /* FILTER IMPORTS */
-import { EvensOnly } from "./filtering/EvensOnly";
-import { LongWordsOnly } from "./filtering/LongWordsOnly";
-import { AdminsOnly } from "./filtering/AdminsOnly";
-import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
-import { CaseInsensitive } from "./filtering/CaseInsensitive";
-import { MultipleConditions } from "./filtering/MultipleConditions";
-import { SearchSimulation } from "./filtering/SearchSimulation";
-import { EmptyState } from "./filtering/EmptyState";
-import { PreFilter } from "./filtering/PreFilter";
+// import { EvensOnly } from "./filtering/EvensOnly";
+// import { LongWordsOnly } from "./filtering/LongWordsOnly";
+// import { AdminsOnly } from "./filtering/AdminsOnly";
+// import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
+// import { CaseInsensitive } from "./filtering/CaseInsensitive";
+// import { MultipleConditions } from "./filtering/MultipleConditions";
+// import { SearchSimulation } from "./filtering/SearchSimulation";
+// import { EmptyState } from "./filtering/EmptyState";
+// import { PreFilter } from "./filtering/PreFilter";
+
+/* REDUCE IMPORTS */
+import { SumNumbers } from "./reducing/SumNumbers";
+import { CountItems } from "./reducing/CountItems";
+import { SumPrices } from "./reducing/SumPrices";
+import { GroupUsers } from "./reducing/GroupUsers";
+import { CountOccurences } from "./reducing/CountOccurences";
+import { LookUp } from "./reducing/LookUp";
+import { CartTotal } from "./reducing/CartTotal";
+import { Stats } from "./reducing/Stats";
 
 /**
  * Array Methods: 3 higher order functions
@@ -66,7 +76,7 @@ function App() {
       <FullNames /> */}
 
       {/* filter */}
-      <EvensOnly />
+      {/* <EvensOnly />
       <LongWordsOnly />
       <AdminsOnly />
       <PriceGreaterThan20 />
@@ -74,7 +84,17 @@ function App() {
       <MultipleConditions />
       <SearchSimulation searchTerm="script" />
       <EmptyState />
-      <PreFilter />
+      <PreFilter /> */}
+
+      {/* reduce */}
+      <SumNumbers />
+      <CountItems />
+      <SumPrices />
+      <GroupUsers />
+      <CountOccurences />
+      <LookUp />
+      <CartTotal />
+      <Stats />
     </>
   );
 }

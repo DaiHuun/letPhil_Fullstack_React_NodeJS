@@ -1,4 +1,3 @@
-import React from "react";
 import ProblemCard from "../extras/ProblemCard";
 
 // nums.reduce((acc, curr) => conditional, startingValue);
@@ -6,7 +5,21 @@ import ProblemCard from "../extras/ProblemCard";
 
 export const SumNumbers = () => {
   const nums = [1, 2, 3, 4];
+  /**
+   * Similar to:
+   *
+   * let sum = 0
+   *
+   * for(i = 0; i < nums.length; i++){
+   *    sum += nums[i];
+   * }
+   */
   const total = nums.reduce((acc, curr) => acc + curr, 0);
+  // 0 + 1
+  // 1 + 2
+  // 3 + 3
+  // 6 + 4
+  // 10
 
   return (
     <ProblemCard
