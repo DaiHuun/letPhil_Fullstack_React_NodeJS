@@ -1,6 +1,7 @@
-import { useState } from "react";
 import "./App.css";
+import SmartCounter from "./components/useState/Counter";
 
-function App() {}
-
+function App() {
+  return <SmartCounter />;
+}
 export default App;
