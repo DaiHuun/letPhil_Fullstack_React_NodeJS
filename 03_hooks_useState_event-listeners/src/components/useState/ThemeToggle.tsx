@@ -20,10 +20,5 @@ Requirements:
 // = assignment, == loose comparison, === strict comparison
 
 export default function ThemeToggle({ name }: { name: string }) {
-
-  return (
-    <div >
-
-    </div>
-  );
+  return <div></div>;
 }

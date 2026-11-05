@@ -10,5 +10,21 @@ Requirements:
 */
 
 export default function NamePreview() {
-  return <div>{/* CODE HERE */}</div>;
+  const [textInput, setTextInput] = useState("");
+
+  return (
+    <div>
+      {/* CODE HERE */}
+      <input
+        type="text"
+        value={textInput}
+        onChange={(text) => setTextInput(text.target.value)}
+        placeholder="Please enter your name"
+        maxLength={20}
+      ></input>
+      <p>
+        {textInput === "" ? "Please enter your name" : `Hello ${textInput}`}
+      </p>
+    </div>
+  );
 }
