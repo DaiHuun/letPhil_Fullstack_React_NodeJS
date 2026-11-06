@@ -20,5 +20,21 @@ Requirements:
 // = assignment, == loose comparison, === strict comparison
 
 export default function ThemeToggle({ name }: { name: string }) {
-  return <div></div>;
+  const [theme, setTheme] = useState("light");
+
+  function checkColor() {
+    if (theme === "light") {
+      setTheme("dark");
+    }
+    if (theme === "dark") {
+      setTheme("light");
+    }
+  }
+
+  return (
+    <div className={theme === "light" ? "bg-red-200" : "bg-blue-400"}>
+      <h1>Current Theme: {theme} </h1>
+      <button onClick={checkColor}>Theme Toggle</button>
+    </div>
+  );
 }
