@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { useTodoContext } from "../context/TodoContext";
 
 const links = [
   { to: "/", label: "All", end: true },
-  { to: "/active", label: "Active", end: false },
+  { to: "/active-page", label: "Active", end: false },
   { to: "/completed-page", label: "Completed", end: false },
 ];
 
@@ -32,3 +32,7 @@ export function Navbar() {
     </header>
   );
 }
+
+/**
+ * active-page i click isActive=false => isActive=>true | navbar_link is-active
+ */

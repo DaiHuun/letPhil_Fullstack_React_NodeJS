@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 export const TempLayout = () => {
   return (
@@ -9,7 +9,6 @@ export const TempLayout = () => {
 
       <Outlet />
 
-      
       <footer>This is the footer content</footer>
     </div>
   );
