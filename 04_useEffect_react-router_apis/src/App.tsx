@@ -14,10 +14,10 @@ function App() {
       {/* <RickandMortyAPI />
       <AllTodosPage /> */}
 
-      <Timer />
-      <RandomUser />
-      <FetchWithStates />
-      <RenderLogger />
+      {/* <Timer /> */}
+      {/* <RandomUser /> */}
+      {/* <FetchWithStates /> */}
+      {/* <RenderLogger /> */}
       <TitleUpdater />
     </div>
   );

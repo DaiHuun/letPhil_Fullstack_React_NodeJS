@@ -9,5 +9,25 @@ Requirements:
 */
 
 export default function Timer() {
-  return <div></div>;
+  const [count, setCount] = useState(0);
+  const timerId = useRef(0);
+
+  useEffect(() => {
+    timerId.current = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(timerId.current);
+  }, []);
+
+  function handleStop() {
+    clearInterval(timerId.current);
+  }
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={handleStop}>Stop</button>
+    </div>
+  );
 }

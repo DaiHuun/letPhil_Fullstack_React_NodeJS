@@ -10,5 +10,16 @@ Requirements: When the button is clicked, counter increments +1,
 */
 
 export default function TitleUpdater() {
-  return <div></div>;
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount((count) => count + 1)}>+ COUNT</button>
+    </div>
+  );
 }
