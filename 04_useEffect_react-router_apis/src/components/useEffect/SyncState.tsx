@@ -1,0 +1,14 @@
+import { useState, useEffect } from "react";
+
+/*
+Requirements: When the button is clicked, counter increments +1, 
+  - update the document.title to whatever number counter is at  
+- Create a counter
+- Update the document title to: document.title
+  "Count: X"
+- Update title whenever count changes
+*/
+
+export default function TitleUpdater() {
+  return <div></div>;
+}
